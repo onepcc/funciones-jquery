@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="on btn-primary">Show P</button>
+        <button class="off btn-secondary">hide</button>
+        <button class="btn-danger flip">Toggle</button>
+        <button class="sup btn-success">ToogleClass</button>
+        <button class="slide btn-dark">SlideToggle</button>
+        <button class="animation1 btn-warning">FadeIn</button>
+        <button class="more btn-info">Mas + </button>
+        <button class="less btn-info">Menos - </button>
+
+        <h1>Esto son acciones en jQuery</h1>
+        <p>Mi nombre es Juan <spam class="insertar text-warning"></spam> Castillo</p>
+        <ul class="border lista"> Acciones vistas en este ejercio (click para remover):
+            <li>Hide</li>
+            <li>Click</li>
+            <li>Toggle</li>
+            <li>Slide</li>
+            <li>FadeToggle</li>
+            <li>Add-Remove Class</li>
+            <li>ToggleClass</li>
+            <li>$this</li>
+            <li>Cambio atributo (atrr)</li>
+            <li>width</li>
+            <li>append</li>
+        </ul>
+        <img class="logo my-2 mx-0" src="img/esphome.png" alt="logo" width="80">
+        <p class="tbasura">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta, accusantium ea
+            tempore corporis quod
+            tempora dolorem a? Nesciunt velit quia facilis dolor rem ex, eaque libero ratione eius recusandae.</p>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- //Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $('.tbasura').hide();
+
+        $('.more').click(function(){
+            $('.logo').attr('width',function(n,v){
+                return v+5;
+            })
+        })
+        
+        $('.container>p').click(function(){
+            $('.insertar').append("Fantastico");
+            $('.insertar').removeClass("insertar");
+            // funciona
+        })
+        $('.less').click(function(){
+            $('.logo').attr('width',function(n,v){
+                return v-10;
+            })
+        })
+
+        $('.logo').click(function () {
+            $(this).removeClass('mx-0');
+            $(this).attr("width","200");
+            // $(this).width(200);
+            // $(this).fadeToggle()
+        })
+
+        $('.on').click(function () {
+            $('.logo').hide();
+            $('.tbasura').show();
+        });
+
+        $('.off').click(function () {
+            $('ul').hide();
+            $('li').removeClass("text-decoration-line-through")
+        });
+
+        $('.flip').click(function () {
+            $('li').addClass("text-decoration-line-through")
+            $('.logo').toggle();
+            $('.tbasura').toggle();
+        });
+
+        $('.animation1').click(function () {
+            $('.container spam').fadeToggle();
+            $('ul').fadeToggle();
+
+        })
+
+        $('.slide').click(function () {
+            $('.lista').slideToggle("slow");
+            $('.logo').slideToggle("fast");
+        })
+
+        $('li').click(function () {
+            $(this).addClass("text-decoration-line-through");
+            $(this).slideUp('slow');
+        }
+        )
+
+        $('.sup').click(function () {
+            // $(this).removeClass("btn-success");
+            // $(this).addClass("btn-info");
+            $(this).toggleClass("btn-info");
+        }
+        )
+
+    </script>
+</body>
+
+</html>
