@@ -21,7 +21,7 @@
         <button class="btn-danger flip">Toggle</button>
         <button class="sup btn-success">ToogleClass</button>
         <button class="slide btn-dark">SlideToggle</button>
-        <button class="animation1 btn-warning">FadeIn</button>
+        <button class="animation1 btn-warning">Fade</button>
         <button class="more btn-info">Mas + </button>
         <button class="less btn-info">Menos - </button>
 
@@ -66,12 +66,14 @@
 
         $('.more').click(function(){
             $('.logo').attr('width',function(n,v){
-                return v+5;
+                return parseInt(v)+5;
             })
         })
         
         $('.container>p').click(function(){
-            $('.insertar').append("Fantastico");
+            
+                $('.insertar').append("<b>Fantastico</b>");
+  
             $('.insertar').removeClass("insertar");
             // funciona
         })
