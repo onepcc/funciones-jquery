@@ -1,4 +1,9 @@
 *.js
+*.zip
 template-bootstrap-jquery.html
 /gato-desaparecido
 /ninja-gato
+/depurando-jquery
+/11-jquery-avanzado
+/bicis-locas-master
+
